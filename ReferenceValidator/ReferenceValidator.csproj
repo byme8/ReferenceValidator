@@ -16,7 +16,7 @@
         <Description>This package allows to avoid referencing to not wanted assemblies.</Description>
         <PackageTags>project references, analyzers</PackageTags>
         <NoPackageAnalysis>true</NoPackageAnalysis>
-        <PackageLicenseFile>content/LICENSE</PackageLicenseFile>
+        <PackageLicense>MIT</PackageLicense>
 
         <TargetsForTfmSpecificContentInPackage>$(TargetsForTfmSpecificContentInPackage);_AddAnalyzersToOutput</TargetsForTfmSpecificContentInPackage>
     </PropertyGroup>
@@ -30,19 +30,10 @@
         <None Update="tools\*.ps1" CopyToOutputDirectory="Always" Pack="true" PackagePath="" />
     </ItemGroup>
 
-    <ItemGroup>
-      <Content Include="..\LICENSE">
-        <Pack>true</Pack>
-        <Link>LICENSE</Link>
-        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      </Content>
-    </ItemGroup>
-
     <Target Name="_AddAnalyzersToOutput">
         <ItemGroup>
-            <TfmSpecificPackageFile Include="$(OutputPath)\BindingExpression.Analyzers.dll" PackagePath="analyzers/dotnet/cs" />
-            <TfmSpecificPackageFile Include="$(OutputPath)\BindingExpression.Core.dll" PackagePath="lib/netstandard2.0" />
-            <TfmSpecificPackageFile Include="$(OutputPath)\LICENSE" PackagePath="content/LICENSE" />
+            <TfmSpecificPackageFile Include="$(OutputPath)\ReferenceValidator.Analyzers.dll" PackagePath="analyzers/dotnet/cs" />
+            <TfmSpecificPackageFile Include="$(OutputPath)\ReferenceValidator.Core.dll" PackagePath="lib/netstandard2.0" />
         </ItemGroup>
     </Target>
 
