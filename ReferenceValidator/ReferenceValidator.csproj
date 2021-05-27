@@ -7,13 +7,13 @@
     </PropertyGroup>
 
     <PropertyGroup>
-        <PackageId>ReferenceValidator</PackageId>
+        <PackageId>Apparatus.ReferenceValidator</PackageId>
         <PackageVersion>0.0.1.0</PackageVersion>
         <Authors>byme</Authors>
         <PackageProjectUrl>https://github.com/byme8/ReferenceValidator</PackageProjectUrl>
         <RepositoryUrl>https://github.com/byme8/ReferenceValidator</RepositoryUrl>
         <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
-        <Description>This package allows to avoid referencing to not wanted assemblies.</Description>
+        <Description>This package allows to avoid referencing to unwanted assemblies.</Description>
         <PackageTags>project references, analyzers</PackageTags>
         <NoPackageAnalysis>true</NoPackageAnalysis>
         <PackageLicense>MIT</PackageLicense>
