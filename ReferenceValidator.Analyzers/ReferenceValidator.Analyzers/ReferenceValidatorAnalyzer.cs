@@ -1,19 +1,14 @@
-using System;
 using System.Collections.Immutable;
-using System.Data;
 using System.Linq;
 using Microsoft.CodeAnalysis;
-using Microsoft.CodeAnalysis.CSharp.Syntax;
 using Microsoft.CodeAnalysis.Diagnostics;
-using Microsoft.CodeAnalysis.Operations;
 
 namespace ReferenceValidator.Analyzers
 {
     [DiagnosticAnalyzer(LanguageNames.CSharp)]
     public class ReferenceValidatorAnalyzer : DiagnosticAnalyzer
-
     {
-        public const string ReferenceValidatorAnalyzerDescriptionId = nameof(ReferenceValidatorAnalyzerDescriptionId);
+        public const string ReferenceValidatorAnalyzerDescriptionId = "ARVF";
 
         public static readonly DiagnosticDescriptor ReferenceForbidDescription
             = new DiagnosticDescriptor(

@@ -15,9 +15,9 @@ namespace ReferenceValidator.Tests
         {
             var project = TestProject.Project;
 
-            var diagnosticts = await project.ApplyAnalyzer(new ReferenceValidatorAnalyzer());
+            var diagnostics = await project.ApplyAnalyzer(new ReferenceValidatorAnalyzer());
             
-            Assert.IsTrue(diagnosticts
+            Assert.IsTrue(diagnostics
                 .Any(o => o.Id == ReferenceValidatorAnalyzer.ReferenceValidatorAnalyzerDescriptionId));
         }
     }
