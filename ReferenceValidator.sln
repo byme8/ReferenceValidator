@@ -5,11 +5,7 @@ VisualStudioVersion = 16.0.30804.86
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ReferenceValidator.Analyzers", "ReferenceValidator.Analyzers\ReferenceValidator.Analyzers\ReferenceValidator.Analyzers.csproj", "{1A355DE9-308B-44C3-8FE7-EA4868948228}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ReferenceValidator.CodeFixes", "ReferenceValidator.Analyzers\ReferenceValidator.CodeFixes\ReferenceValidator.CodeFixes.csproj", "{37FFE669-DC11-48DF-9642-71CE149FE01B}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ReferenceValidator.Tests", "ReferenceValidator.Analyzers\ReferenceValidator.Tests\ReferenceValidator.Tests.csproj", "{E05990D8-4D63-4270-BF08-35FA3EFEBA97}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ReferenceValidator.Vsix", "ReferenceValidator.Analyzers\ReferenceValidator.Vsix\ReferenceValidator.Vsix.csproj", "{032D2D1F-03F6-4065-AAD4-3047A5ACFC5B}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution", "Solution", "{F52B3E38-B86F-4F2E-A0E7-34E12D4CF7EE}"
 	ProjectSection(SolutionItems) = preProject
@@ -31,18 +27,10 @@ Global
 		{1A355DE9-308B-44C3-8FE7-EA4868948228}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1A355DE9-308B-44C3-8FE7-EA4868948228}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1A355DE9-308B-44C3-8FE7-EA4868948228}.Release|Any CPU.Build.0 = Release|Any CPU
-		{37FFE669-DC11-48DF-9642-71CE149FE01B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{37FFE669-DC11-48DF-9642-71CE149FE01B}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{37FFE669-DC11-48DF-9642-71CE149FE01B}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{37FFE669-DC11-48DF-9642-71CE149FE01B}.Release|Any CPU.Build.0 = Release|Any CPU
 		{E05990D8-4D63-4270-BF08-35FA3EFEBA97}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{E05990D8-4D63-4270-BF08-35FA3EFEBA97}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E05990D8-4D63-4270-BF08-35FA3EFEBA97}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E05990D8-4D63-4270-BF08-35FA3EFEBA97}.Release|Any CPU.Build.0 = Release|Any CPU
-		{032D2D1F-03F6-4065-AAD4-3047A5ACFC5B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{032D2D1F-03F6-4065-AAD4-3047A5ACFC5B}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{032D2D1F-03F6-4065-AAD4-3047A5ACFC5B}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{032D2D1F-03F6-4065-AAD4-3047A5ACFC5B}.Release|Any CPU.Build.0 = Release|Any CPU
 		{F141A5FF-677C-4AB8-9CC2-FEC566620A10}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{F141A5FF-677C-4AB8-9CC2-FEC566620A10}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F141A5FF-677C-4AB8-9CC2-FEC566620A10}.Release|Any CPU.ActiveCfg = Release|Any CPU

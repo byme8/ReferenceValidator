@@ -1,24 +1,22 @@
-using System.Linq;
-using System.Threading.Tasks;
-using ReferenceValidator.Analyzers.Utils;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
 using ReferenceValidator.Analyzers;
 using ReferenceValidator.Test.Data;
+using ReferenceValidator.Tests.Utils;
 
-namespace ReferenceValidator.Tests
+namespace ReferenceValidator.Tests;
+
+public class ReferenceValidatorAnalyzerTest
 {
-    [TestClass]
-    public class BindingExpressionAnalyzerTest
+    [Fact]
+    public async Task NotAllowedReferenceFound()
     {
-        [TestMethod]
-        public async Task NotAllowedReferenceFound()
-        {
-            var project = TestProject.Project;
+        var project = TestProject.Project;
 
-            var diagnostics = await project.ApplyAnalyzer(new ReferenceValidatorAnalyzer());
-            
-            Assert.IsTrue(diagnostics
-                .Any(o => o.Id == ReferenceValidatorAnalyzer.ReferenceValidatorAnalyzerDescriptionId));
-        }
+        var diagnostics = await project.ApplyAnalyzer(new ReferenceValidatorAnalyzer());
+        var errors = diagnostics
+            .Where(o => o.Severity == Microsoft.CodeAnalysis.DiagnosticSeverity.Error)
+            .Select(o => o.GetMessage())
+            .ToArray();
+
+        await Verify(errors);
     }
 }

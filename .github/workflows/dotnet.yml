@@ -1,0 +1,25 @@
+name: .NET
+
+on:
+  push:
+    tags:        
+      - v**
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Setup .NET 8
+      uses: actions/setup-dotnet@v1
+      with:
+        dotnet-version: '8.0.x'
+    - name: Restore dependencies
+      run: dotnet restore
+    - name: Build And Pack
+      run: | 
+        pwsh ./pack.ps1 -version ${GITHUB_REF_NAME:1}
+        cd ./nugets
+        dotnet nuget push *.nupkg --skip-duplicate -s https://nuget.org -k ${{ secrets.API_KEY }} 

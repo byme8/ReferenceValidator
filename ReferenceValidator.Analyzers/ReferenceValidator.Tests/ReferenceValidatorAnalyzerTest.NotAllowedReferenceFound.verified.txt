@@ -1,0 +1,5 @@
+﻿[
+  Reference to 'System.Linq' not allowed,
+  Reference to 'System.Runtime' not allowed,
+  Reference to 'System.Buffers' not allowed
+]

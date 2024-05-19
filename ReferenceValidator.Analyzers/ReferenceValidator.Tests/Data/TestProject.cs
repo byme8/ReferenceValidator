@@ -35,24 +35,26 @@ namespace ReferenceValidator.Test.Data
                 MetadataReference.CreateFromFile(typeof(Attribute).Assembly.Location),
                 MetadataReference.CreateFromFile(typeof(ArrayPool<>).Assembly.Location),
                 MetadataReference.CreateFromFile(typeof(Expression<>).Assembly.Location),
-                MetadataReference.CreateFromFile(typeof(ForbidAttribute).Assembly.Location),
+                MetadataReference.CreateFromFile(typeof(FailOnAssemblyReferenceAttribute).Assembly.Location),
             };
         }
         public const string ProgramCS = @"
-    using System;
-    using System.Linq.Expressions;
-    
+            using System;
+            using System.Linq.Expressions;
+            using ReferenceValidator;
 
-    namespace TestProject 
-    {
-        class Program
-        {
-            [ReferenceValidator.ForbidAttribute(""System.Runtime"")]
-            static void Main(string[] args)
+            namespace TestProject 
             {
-            }  
-        } 
-    }
+                [FailOnAssemblyReference(""System.Linq"")]
+                class Program
+                {
+                    [FailOnAssemblyReference(""System.Runtime"")]
+                    [FailOnAssemblyReference(""System.Buffers"")]
+                    static void Main(string[] args)
+                    {
+                    }  
+                } 
+            }
 ";
     }
 }

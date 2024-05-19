@@ -3,8 +3,9 @@
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
     <PackageId>ReferenceValidator.Analyzers</PackageId>
+    <LangVersion>latest</LangVersion>
+    <Nullable>enable</Nullable>
     <Authors>byme</Authors>
-    <Version>0.0.1</Version>
   </PropertyGroup>
 
   <ItemGroup>

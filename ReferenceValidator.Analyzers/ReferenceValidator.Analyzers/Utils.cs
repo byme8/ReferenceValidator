@@ -25,21 +25,6 @@ namespace ReferenceValidator
             }
         }
         
-        public static ITypeSymbol GetTypeSymbol(this SymbolInfo info)
-        {
-            switch (info.Symbol)
-            {
-                case ITypeSymbol type:
-                    return type;
-                case ILocalSymbol local:
-                    return local.Type;
-                case IParameterSymbol parameterSymbol:
-                    return parameterSymbol.Type;
-                default:
-                    return null;
-            }
-        }
-        
         public static IEnumerable<IMethodSymbol> GetPublicMethods(this IEnumerable<ISymbol> members)
         {
             return members
